@@ -1,11 +1,10 @@
 'use strict';
 
-const WebSocket = require('ws')
-const EventEmitter = require('events');
-const Emittery = require('emittery');
+import Emittery from 'emittery';
+import EventEmitter from 'events';
+import WebSocket from 'ws';
 
 class ConsumerServer {
-
     constructor(opts) {
         if(!opts.port) {
             throw Error("port not defined");
@@ -204,7 +203,5 @@ class ConsumerServer {
         }
     }
 }
-        
-    
 
-module.exports = ConsumerServer;
+export default ConsumerServer;

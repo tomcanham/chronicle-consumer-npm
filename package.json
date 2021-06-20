@@ -5,8 +5,9 @@
     "license": "MIT",
     "author": "cc32d9 (https://github.com/cc32d9)",
     "engines": {
-        "node": ">= 0.12.0"
+        "node": ">= 13.0.0"
     },
+    "type": "module",
     "dependencies": {
         "emittery": "^0.5.1",
         "ws": "^7.4.6"
