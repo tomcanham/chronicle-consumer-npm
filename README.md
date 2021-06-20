@@ -33,7 +33,7 @@ provide practical examples on using the library.
 ## Installing
 
 ```
-npm install chronicle-consumer
+yarn add chronicle-consumer
 ```
 
 ## Usage
@@ -46,6 +46,10 @@ use a lower value in Chronicle configuration, such as
 
 The module defines an event emitter class, and your application
 subscribes to events of interest.
+
+Note: this module (by default) uses the yarn package manager (converting 
+to NPM is trivial, however) and uses the Node.js ES6 import format, which
+requires a more recent version of Node.js
 
 The consumer process opens a Websocket server on a specified port, and
 this server accepts only one connection from Chronicle. If you need to
@@ -70,7 +74,7 @@ follows: `node --max-old-space-size=4096 app.js`.
 Synchronous mode:
 
 ```
-const ConsumerServer = require('chronicle-consumer');
+import ConsumerServer from 'chronicle-consumer';
 
 const server = new ConsumerServer({port: 8899});
 
@@ -108,7 +112,7 @@ server.start();
 Asynchronous mode, with random timers:
 
 ```
-const ConsumerServer = require('chronicle-consumer');
+import ConsumerServer from 'chronicle-consumer';
 
 function _delay() {return Math.floor(Math.random()*10000);}
 
