@@ -74,6 +74,10 @@ function testHarness(consumerAddress, delay = 1000) {
     
     process.exit(0);
   });
+
+  ws.on('message', (data) => {
+    console.log('ACK:', data)
+  });
 }
 
 testHarness(consumerAddress, 100)
